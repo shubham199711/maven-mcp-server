@@ -102,3 +102,23 @@ The tool queries the Maven Central Search API and:
 ## License
 
 MIT
+
+## Config
+
+```json
+{
+    "mcpServers": {
+        "Maven_Version_Lookup_MCP_Server": {
+            "command": "uv",
+            "args": [
+                "run",
+                "--with",
+                "langchain,langchain-core,httpx,pydantic,packaging,mcp[cli]",
+                "mcp",
+                "run",
+                "/Users/shubhamdohare/Code/maven-mcp-server/server.py"
+            ]
+        }
+    }
+}
+```
