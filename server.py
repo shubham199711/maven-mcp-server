@@ -7,7 +7,7 @@ mcp = FastMCP("Maven_Tools")
 
 # Register the Maven version lookup tool
 @mcp.tool()
-def get_latest_maven_version(group_id: str, artifact_id: str) -> str:
+async def get_latest_maven_version(group_id: str, artifact_id: str) -> str:
     """Get the latest stable version of a Maven artifact from Maven Central."""
     tool = MavenVersionTool()
-    return tool._run(group_id=group_id, artifact_id=artifact_id)
+    return await tool._arun(group_id=group_id, artifact_id=artifact_id)
